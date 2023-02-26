@@ -1,10 +1,11 @@
 namespace VendorOrderTracker.Models
 {
-  public class VendorsAndOrders
+  public class Vendor
   {
-    public VendorsAndOrders()
+    public string VendorName{get; set;}
+    public Vendor(string NewVendor)
     {
-      
+      VendorName = NewVendor;
     }
   }
 }
