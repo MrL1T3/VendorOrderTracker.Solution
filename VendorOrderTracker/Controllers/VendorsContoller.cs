@@ -8,9 +8,11 @@ namespace VendorOrderTracker.Controllers
   {
     public ActionResult Index()
     {
-      Vendor example = new Vendor("Example", "This is a Description");
+      Vendor example = new Vendor("Example.", "This is a description.");
+      Vendor exampleTwo = new Vendor("Another?", "I guess here's another description.");
       List<Vendor> vendors = new List<Vendor>();
       vendors.Add(example);
+      vendors.Add(exampleTwo);
       return View(vendors);
     }
   }
