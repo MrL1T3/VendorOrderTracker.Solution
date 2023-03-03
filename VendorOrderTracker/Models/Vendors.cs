@@ -11,8 +11,8 @@ namespace VendorOrderTracker.Models
       VendorName = NewVendor;
       VendorDesc = NewDesc;
     }
-    public static List<Vendor> sVendors = new List<Vendor> {
-      new Vendor("Example", "")
-    };
+    // public static List<Vendor> sVendors = new List<Vendor> {
+    //   new Vendor("Example", "This is a description")
+    // };
   }
 }

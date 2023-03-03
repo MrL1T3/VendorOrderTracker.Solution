@@ -8,8 +8,7 @@ namespace VendorOrderTracker.Controllers
   {
     public ActionResult Index()
     {
-      Vendor example = new Vendor("Example", "");
-      // System.Collections.Generic.List<Vendor> vendors = VendorOrderTracker.Models.Vendor.sVendors;
+      Vendor example = new Vendor("Example", "This is a Description");
       List<Vendor> vendors = new List<Vendor>();
       vendors.Add(example);
       return View(vendors);
