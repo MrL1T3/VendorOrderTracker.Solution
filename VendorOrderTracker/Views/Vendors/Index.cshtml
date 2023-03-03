@@ -7,11 +7,18 @@
   </head>
   <body>
     <p>Here is some stuff.</p>
-    @foreach (var item in Model)
-    {
-      @Html.DisplayFor(modelItem => item.VendorName) 
-      @Html.DisplayFor(modelItem => item.VendorDesc)
-    }
+    <table>
+      @foreach (var item in Model)
+      {
+      <tr>
+        <td>@item.VendorName</td>
+        <td>@item.VendorDesc</td>
+      </tr>
+      @* @Html.DisplayFor(modelItem => item.VendorName) 
+      @Html.DisplayFor(modelItem => item.VendorDesc) *@
+      } 
+    </table>
+    
     
   </body>
 </html>
