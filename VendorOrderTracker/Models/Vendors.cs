@@ -6,13 +6,28 @@ namespace VendorOrderTracker.Models
   {
     public string VendorName{get; set;}
     public string VendorDesc{get; set;}
+
+    public Vendor()
+    {
+      VendorName = "untitled";
+      VendorDesc = "";
+    }
+
     public Vendor(string NewVendor, string NewDesc)
     {
       VendorName = NewVendor;
       VendorDesc = NewDesc;
     }
-    // public static List<Vendor> sVendors = new List<Vendor> {
-    //   new Vendor("Example", "This is a description")
-    // };
+
+    private static List<Vendor> sVendors = new List<Vendor>();
+
+    public static void AddVendor(Vendor v) {
+      sVendors.Add(v);
+    }
+    
+    public static List<Vendor> VendorList() {
+      return sVendors;
+    }
+
   }
 }

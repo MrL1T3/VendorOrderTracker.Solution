@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using VendorOrderTracker.Models;
-using System.Collections.Generic;
+using System;
 
 namespace VendorOrderTracker.Controllers
 {
@@ -8,12 +8,22 @@ namespace VendorOrderTracker.Controllers
   {
     public ActionResult Index()
     {
-      Vendor example = new Vendor("Example.", "This is a description.");
-      Vendor exampleTwo = new Vendor("Another?", "I guess here's another description.");
-      List<Vendor> vendors = new List<Vendor>();
-      vendors.Add(example);
-      vendors.Add(exampleTwo);
-      return View(vendors);
+      return View(VendorOrderTracker.Models.Vendor.VendorList());
+    }
+
+    public ActionResult AddVendor()
+    {
+      Console.WriteLine("add vendor page");
+      return View(new Vendor("untitled", ""));
+    }
+
+    [HttpPost]
+    public ActionResult AddVendorForm(Vendor model)
+    {
+      Console.WriteLine("POST!");
+      VendorOrderTracker.Models.Vendor.AddVendor(model);
+
+      return RedirectToAction("Index");
     }
   }
 }
