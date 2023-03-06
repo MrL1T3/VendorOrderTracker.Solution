@@ -7,7 +7,17 @@ namespace VendorOrderTracker.Controllers
   {
     public ActionResult Index()
     {
-      return View();
+      return View(VendorOrderTracker.Models.Order.OrderList());
+    }
+    public ActionResult AddOrder()
+    {
+      return View(new Order("example order"));
+    }
+    [HttpPost]
+    public ActionResult AddOrderForm(Order model)
+    {
+      VendorOrderTracker.Models.Order.AddOrder(model);
+      return RedirectToAction("AddOrder");
     }
   }
 }
