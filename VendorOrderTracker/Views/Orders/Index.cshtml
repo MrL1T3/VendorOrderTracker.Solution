@@ -11,12 +11,14 @@
   </head>
   <body>
     <h1>This is a page</h1>
-    @foreach (var item in Model)
+    <table>
+      @foreach (var item in Model)
       {
       <tr>
         <td>@item.OrderText</td>
       </tr>
       } 
+    </table>
     <p>@Html.ActionLink("Form to add a new order.", "AddOrder", "Orders" )</p>
   </body> 
 </html>
