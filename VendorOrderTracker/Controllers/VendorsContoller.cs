@@ -11,7 +11,7 @@ namespace VendorOrderTracker.Controllers
     }
     public ActionResult AddVendor()
     {
-      return View(new Vendor("untitled", ""));
+      return View(new Vendor("", ""));
     }
     [HttpPost]
     public ActionResult AddVendorForm(Vendor model)

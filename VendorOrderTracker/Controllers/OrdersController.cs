@@ -11,13 +11,13 @@ namespace VendorOrderTracker.Controllers
     }
     public ActionResult AddOrder()
     {
-      return View(new Order("example order"));
+      return View(new Order(""));
     }
     [HttpPost]
     public ActionResult AddOrderForm(Order model)
     {
       VendorOrderTracker.Models.Order.AddOrder(model);
-      return RedirectToAction("AddOrder");
+      return RedirectToAction("Index");
     }
   }
 }
