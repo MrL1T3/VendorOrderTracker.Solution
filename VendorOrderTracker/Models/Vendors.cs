@@ -9,7 +9,7 @@ namespace VendorOrderTracker.Models
     public int VendorID{get;}
     public string VendorName{get; set;}
     public string VendorDesc{get; set;}
-    private List<Order> speOrders = new List<Order>();
+    public List<Order> speOrders = new List<Order>();
     public void AddNewOrder(Order o) {
       speOrders.Add(o);
     }

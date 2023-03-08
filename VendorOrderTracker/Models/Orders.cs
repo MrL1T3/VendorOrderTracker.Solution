@@ -16,14 +16,10 @@ namespace VendorOrderTracker.Models
       VendorID = newID;
       OrderText = submittedOrder;
     }
-    private static List<Order> sOrders = new List<Order>();
 
     public static void AddOrder(Order o) {
-      sOrders.Add(o);
-    }
-    
-    public static List<Order> OrderList() {
-      return sOrders;
+      Vendor v = Vendor.FindVendorByID(o.VendorID);
+      v.AddNewOrder(o);
     }
   }
 }
