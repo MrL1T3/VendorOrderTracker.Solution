@@ -39,5 +39,11 @@ namespace VendorOrderTracker.Tests
       Order newOrder = new Order("", "", "02/13/10", 1);
       Assert.AreEqual("02/13/10", newOrder.OrderDate);
     }
+    [TestMethod]
+    public void OrderTitle_Equals_Pastry_Sale_4_True()
+    {
+      Order newOrder = new Order("Pastry Sale 4", "", "", "02/13/10", 1);
+      Assert.AreEqual("Pastry Sale 4", newOrder.OrderTitle);
+    }
   }
 }
