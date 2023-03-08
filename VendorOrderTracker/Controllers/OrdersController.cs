@@ -13,7 +13,7 @@ namespace VendorOrderTracker.Controllers
     public ActionResult AddOrder(int id)
     {
       ViewData["id"] = id;
-      Order order = new Order("", 0);
+      Order order = new Order("", "", 0);
 
       return View(order);
     }
