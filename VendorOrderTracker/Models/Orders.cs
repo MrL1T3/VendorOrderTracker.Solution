@@ -8,12 +8,14 @@ namespace VendorOrderTracker.Models
     public string OrderText{get; set;}
     public string OrderPrice{get; set;}
     public string OrderDate{get; set;}
-    public Order(string submittedOrder, string submittedPrice, string submittedDate, int newID)
+    public string OrderTitle{get; set;}
+    public Order(string submittedTitle, string submittedOrder, string submittedPrice, string submittedDate, int newID)
     {
       VendorID = newID;
       OrderText = submittedOrder;
       OrderPrice = submittedPrice;
       OrderDate = submittedDate;
+      OrderTitle = submittedTitle;
     }
 
     public static void AddOrder(Order o) {
