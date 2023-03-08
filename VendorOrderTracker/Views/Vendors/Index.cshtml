@@ -18,8 +18,6 @@
       <tr>
         <td>@item.VendorName</td>
         <td>@item.VendorDesc</td>
-        @* //  new {                                                     // routeValues
-        // blogPostId = blogPostId,  *@
         @Html.ActionLink("Vendor: " + item.VendorName, "Vendor", "Vendors", new { id = @item.VendorID } )
       </tr>
       } 

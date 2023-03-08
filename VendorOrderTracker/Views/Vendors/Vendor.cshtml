@@ -20,7 +20,14 @@
         <td>@Model.VendorDesc</td>
       </tr>
     </table>
-    @* TODO: Show the list of all the orders in this vendor. *@
+    <table>
+      @foreach (var item in Model.speOrders)
+      {
+        <tr>
+          <td>@item.OrderText</td>
+        </tr>
+      }
+    </table>
     <p>@Html.ActionLink("Form to add a new order.", "AddOrder", "Orders", new{id = Model.VendorID} )</p>
   </body>
 </html>
