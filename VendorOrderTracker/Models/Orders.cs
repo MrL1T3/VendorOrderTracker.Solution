@@ -9,6 +9,10 @@ namespace VendorOrderTracker.Models
     public string OrderPrice{get; set;}
     public string OrderDate{get; set;}
     public string OrderTitle{get; set;}
+    public Order()
+    {
+      
+    }
     public Order(string submittedTitle, string submittedOrder, string submittedPrice, string submittedDate, int newID)
     {
       VendorID = newID;

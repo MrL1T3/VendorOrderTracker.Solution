@@ -18,7 +18,6 @@ namespace VendorOrderTracker.Controllers
       return View(order);
     }
     [HttpPost]
-    //  [Route("Orders/AddOrderForm/{id?}")]
     public ActionResult AddOrderForm(int id, Order model)
     {
       model.VendorID = id;
