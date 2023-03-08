@@ -13,13 +13,12 @@
   <body>
     <p>
       @{var vendorId = ViewData["id"]; }
-      Your vendor ID is @vendorId
     </p>
     @using (Html.BeginForm("AddOrderForm", "Orders", new { id=vendorId }, FormMethod.Post))
     {
       <table>
         <tr>
-            <td>Enter Order Description: </td>
+            <td>Order Description: </td>
             <td>@Html.TextBoxFor(m => m.OrderText)</td>
         </tr>
         <tr>
