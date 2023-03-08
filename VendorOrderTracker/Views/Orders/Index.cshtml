@@ -15,7 +15,10 @@
       @foreach (var item in Model)
       {
       <tr>
+        <td>@item.OrderTitle</td>
         <td>@item.OrderText</td>
+        <td>@item.OrderDate</td>
+        <td>@item.OrderPrice</td>
       </tr>
       } 
     </table>
