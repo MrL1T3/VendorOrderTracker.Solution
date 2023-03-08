@@ -18,10 +18,13 @@
       <tr>
         <td>@item.VendorName</td>
         <td>@item.VendorDesc</td>
+        @* //  new {                                                     // routeValues
+        // blogPostId = blogPostId,  *@
+        @Html.ActionLink("Vendor: " + item.VendorName, "Vendor", "Vendors", new { id = @item.VendorID } )
       </tr>
       } 
     </table>
     <p>@Html.ActionLink("Form to add a new vendor.", "AddVendor", "Vendors")</p>
-    <p>@Html.ActionLink("Lsit of all known orders.", "Index", "Orders" )</p>
+    <p>@Html.ActionLink("List of all known orders.", "Index", "Orders" )</p>
   </body>
 </html>
