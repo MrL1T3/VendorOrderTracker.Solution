@@ -27,5 +27,11 @@ namespace VendorOrderTracker.Tests
       v.AddNewOrder(o);
       Assert.IsTrue(v.speOrders.Contains(o));
     }
+    [TestMethod]
+    public void OrderPrice_Equals_Six_Dollars_True()
+    {
+      Order newOrder = new Order("Example", "Six DOllars", 1);
+      Assert.AreEqual("Six Dollars", newOrder.OrderPrice);
+    }
   }
 }
